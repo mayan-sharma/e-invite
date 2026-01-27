@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Wedding Invitation</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300&family=Outfit:wght@200;300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Grain Texture Overlay -->
+    <div class="grain-overlay"></div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursorFollower"></div>
+    <!-- Full Page Opening Animation -->
+    <div class="page-reveal" id="pageReveal">
+        <div class="reveal-left"></div>
+        <div class="reveal-right"></div>
+        <div class="reveal-content">
+            <div class="reveal-card">
+                <div class="reveal-ornaments">
+                    <div class="rev-ornament o-1"></div>
+                    <div class="rev-ornament o-2"></div>
+                    <div class="rev-ornament o-3"></div>
+                    <div class="rev-ornament o-4"></div>
+                </div>
+                <div class="card-monogram">N<br>&<br>G</div>
+                <div class="card-divider"></div>
+                <div class="card-invite-text">You're Invited</div>
+                <div class="card-flourish">∼ ❀ ∼</div>
+                <button class="card-btn" id="openBtn">Open Invitation</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Site -->
+    <div class="main-site" id="mainSite">
+
+        <section class="section hero-full">
+            <div class="hero-giant">
+                <h1 class="giant-text">
+                    <span class="giant-line">WE'RE</span>
+                    <span class="giant-line">GETTING</span>
+                    <span class="giant-line">MARRIED</span>
+                </h1>
+            </div>
+            <div class="hero-meta">
+                <p class="couple-names">Nikhil & Gauri</p>
+                <p class="wedding-year">2026</p>
+            </div>
+        </section>
+
+        <section class="section event-reveal sagan-event">
+            <div class="event-container">
+                <!-- Fixed heading at top -->
+                <div class="event-heading-fixed">
+                    <div class="event-label">01 — Ceremony</div>
+                    <h2 class="event-name">Sagan</h2>
+                </div>
+
+                <!-- Background image behind heading -->
+                <div class="event-bg-img">
+                    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=1600&q=90" alt="Sagan">
+                </div>
+
+                <!-- Info card overlays everything -->
+                <div class="event-content-overlay">
+                    <div class="event-info-card">
+                        <div class="info-item">
+                            <span class="info-key">Date</span>
+                            <span class="info-val">14 February 2026</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-key">Time</span>
+                            <span class="info-val">6:00 PM</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-key">Location</span>
+                            <span class="info-val">Venue Name<br>City, State</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section event-reveal wedding-event">
+            <div class="event-container">
+                <!-- Fixed heading at top -->
+                <div class="event-heading-fixed right">
+                    <div class="event-label">02 — Ceremony</div>
+                    <h2 class="event-name">Wedding</h2>
+                </div>
+
+                <!-- Background image behind heading -->
+                <div class="event-bg-img">
+                    <img src="https://images.unsplash.com/photo-1606800052052-a08af7148866?w=1600&q=90" alt="Wedding">
+                </div>
+
+                <!-- Info card overlays everything -->
+                <div class="event-content-overlay right">
+                    <div class="event-info-card">
+                        <div class="info-item">
+                            <span class="info-key">Date</span>
+                            <span class="info-val">21 February 2026</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-key">Time</span>
+                            <span class="info-val">7:00 AM</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-key">Location</span>
+                            <span class="info-val">Venue Name<br>City, State</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section gallery-showcase">
+            <h2 class="gallery-heading">Our Journey</h2>
+            <div class="journey-grid">
+                <div class="journey-box box-1" data-magnetic>
+                    <div class="journey-box-inner">
+                        <span class="journey-number">01</span>
+                        <h3 class="journey-title">First Meet</h3>
+                        <p class="journey-text">Where it all began</p>
+                    </div>
+                </div>
+                <div class="journey-box box-2" data-magnetic>
+                    <div class="journey-box-inner">
+                        <span class="journey-number">02</span>
+                        <h3 class="journey-title">The Proposal</h3>
+                        <p class="journey-text">A moment forever</p>
+                    </div>
+                </div>
+                <div class="journey-box box-3" data-magnetic>
+                    <div class="journey-box-inner">
+                        <span class="journey-number">03</span>
+                        <h3 class="journey-title">Together</h3>
+                        <p class="journey-text">Building our story</p>
+                    </div>
+                </div>
+                <div class="journey-box box-4" data-magnetic>
+                    <div class="journey-box-inner">
+                        <span class="journey-number">04</span>
+                        <h3 class="journey-title">Forever</h3>
+                        <p class="journey-text">Our new beginning</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="section finale">
+            <div class="finale-overlay"></div>
+            <div class="finale-content">
+                <p class="finale-message">See you there</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
