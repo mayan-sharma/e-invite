@@ -50,9 +50,10 @@ body{
     position:fixed;
     border-radius:50%;
     pointer-events:none;
-    z-index:9998;
+    z-index:10001;
     transition:transform .2s ease;
     display:none;
+    mix-blend-mode:difference;
 }
 
 .cursor{
@@ -66,19 +67,20 @@ body{
     width:40px;
     height:40px;
     border:1px solid var(--accent);
-    opacity:.4;
+    opacity:.5;
     transform:translate(-50%,-50%) scale(1);
     transition:transform .3s cubic-bezier(.75,-.5,.25,1.5),opacity .3s ease;
 }
 
 .cursor-follower.hover{
     transform:translate(-50%,-50%) scale(1.8);
-    opacity:.8;
+    opacity:.9;
 }
 
 @media(min-width:1024px){
     .cursor,.cursor-follower{display:block}
     body{cursor:none}
+    body *{cursor:none}
     a,button,[data-magnetic]{cursor:none}
 }
 
@@ -114,7 +116,7 @@ body{
     display:flex;
     align-items:center;
     justify-content:center;
-    z-index:3;
+    z-index:10002;
     transition:opacity 1.5s ease;
     pointer-events:all;
     padding:1rem;
@@ -326,13 +328,14 @@ body{
 }
 
 .event-label{
-    font-size:clamp(.65rem,1.2vw,.75rem);
-    font-weight:400;
-    letter-spacing:.3em;
+    font-size:clamp(.85rem,1.8vw,1.1rem);
+    font-weight:500;
+    letter-spacing:.35em;
     text-transform:uppercase;
     color:var(--accent);
     margin-bottom:clamp(.8rem,2vw,1.5rem);
-    opacity:.8;
+    opacity:1;
+    text-shadow:0 0 20px rgba(212,165,116,.5);
 }
 
 .event-name{
@@ -473,7 +476,7 @@ body{
 
 .journey-grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
     gap:clamp(2rem,4vw,4rem);
     position:relative;
     /* Overlap with heading above */
@@ -483,19 +486,20 @@ body{
 .journey-box{
     aspect-ratio:1;
     position:relative;
-    border:1px solid rgba(212,165,116,.15);
-    background:linear-gradient(135deg,rgba(26,26,26,.5),rgba(15,15,15,.8));
+    border:2px solid rgba(212,165,116,.8);
+    background:linear-gradient(135deg,rgba(50,50,50,1),rgba(35,35,35,1));
     backdrop-filter:blur(10px);
     transition:all .5s cubic-bezier(.23,1,.32,1);
     overflow:hidden;
+    box-shadow:0 10px 40px rgba(0,0,0,.8),0 0 0 1px rgba(212,165,116,.4) inset,0 0 20px rgba(212,165,116,.15);
 }
 
 .journey-box::before{
     content:'';
     position:absolute;
     inset:0;
-    background:radial-gradient(circle at 30% 30%,rgba(212,165,116,.08),transparent 70%);
-    opacity:0;
+    background:radial-gradient(circle at 30% 30%,rgba(212,165,116,.3),transparent 70%);
+    opacity:1;
     transition:opacity .5s ease;
 }
 
@@ -505,19 +509,23 @@ body{
     bottom:0;
     left:0;
     right:0;
-    height:1px;
+    height:2px;
     background:linear-gradient(90deg,transparent,var(--accent),transparent);
-    opacity:0;
+    opacity:.7;
     transition:opacity .5s ease;
 }
 
 .journey-box:hover{
-    border-color:rgba(212,165,116,.4);
+    border-color:rgba(212,165,116,1);
     transform:translateY(-8px);
-    box-shadow:0 25px 70px rgba(0,0,0,.4),0 0 0 1px rgba(212,165,116,.1) inset;
+    box-shadow:0 25px 70px rgba(0,0,0,.9),0 0 0 1px rgba(212,165,116,.7) inset,0 0 50px rgba(212,165,116,.3);
 }
 
-.journey-box:hover::before,
+.journey-box:hover::before{
+    opacity:1;
+    background:radial-gradient(circle at 30% 30%,rgba(212,165,116,.4),transparent 70%);
+}
+
 .journey-box:hover::after{
     opacity:1;
 }
@@ -534,28 +542,31 @@ body{
 
 .journey-number{
     font-family:'Fraunces',serif;
-    font-size:clamp(1rem,2vw,1.2rem);
-    font-weight:300;
+    font-size:clamp(1.1rem,2vw,1.3rem);
+    font-weight:400;
     letter-spacing:.3em;
     color:var(--accent);
-    opacity:.5;
+    opacity:1;
+    text-shadow:0 0 15px rgba(212,165,116,.6);
 }
 
 .journey-title{
     font-family:'Fraunces',serif;
-    font-size:clamp(2.2rem,4.5vw,3.5rem);
+    font-size:clamp(2.5rem,5vw,4rem);
     font-weight:300;
     line-height:1;
     color:var(--fg);
     margin-bottom:.8rem;
+    text-shadow:0 2px 20px rgba(0,0,0,.8);
 }
 
 .journey-text{
-    font-size:clamp(.95rem,1.5vw,1.15rem);
+    font-size:clamp(1rem,1.6vw,1.25rem);
     font-weight:300;
-    color:var(--muted);
+    color:rgba(250,250,250,.95);
     letter-spacing:.03em;
     line-height:1.6;
+    text-shadow:0 1px 8px rgba(0,0,0,.5);
 }
 
 /* FOOTER */

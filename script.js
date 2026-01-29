@@ -119,7 +119,7 @@ function initAnimations() {
     // Gallery - staggered reveal
     ScrollTrigger.create({
         trigger: '.gallery-showcase',
-        start: 'top 75%',
+        start: 'top 95%',
         once: true,
         onEnter: () => {
             gsap.from('.gallery-heading', {
@@ -130,8 +130,8 @@ function initAnimations() {
             });
 
             gsap.from('.journey-box', {
-                opacity: 0,
-                y: 40,
+                scale: 0.95,
+                y: 20,
                 duration: 1,
                 stagger: 0.1,
                 ease: 'power3.out',
