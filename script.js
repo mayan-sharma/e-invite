@@ -69,9 +69,24 @@ magneticElements.forEach(el => {
 const openBtn = document.getElementById('openBtn');
 const pageReveal = document.getElementById('pageReveal');
 const mainSite = document.getElementById('mainSite');
+const birdsContainer = document.getElementById('birdsContainer');
+const petalsOverlay = document.getElementById('petalsOverlay');
+const sparklesOverlay = document.getElementById('sparklesOverlay');
 
 openBtn.addEventListener('click', () => {
     pageReveal.classList.add('opened');
+
+    // Activate sparkles
+    setTimeout(() => {
+        sparklesOverlay.classList.add('active');
+        createSparkles();
+    }, 900);
+
+    // Activate petals
+    setTimeout(() => {
+        petalsOverlay.classList.add('active');
+        createPetals();
+    }, 1000);
 
     setTimeout(() => {
         mainSite.classList.add('visible');
@@ -79,6 +94,82 @@ openBtn.addEventListener('click', () => {
         initParallax();
     }, 1500);
 });
+
+// CREATE CONFETTI
+function createPetals() {
+    const confettiTypes = ['rect', 'circle', 'triangle', 'square', 'ribbon'];
+
+    // Initial burst from center
+    for (let i = 0; i < 30; i++) {
+        const confetti = document.createElement('div');
+        const type = confettiTypes[Math.floor(Math.random() * confettiTypes.length)];
+
+        confetti.className = `confetti confetti-${type} confetti-burst`;
+
+        const angle = (Math.PI * 2 * i) / 30;
+        const velocity = 100 + Math.random() * 150;
+        const burstX = Math.cos(angle) * velocity;
+        const burstY = Math.sin(angle) * velocity - 200; // Upward bias
+
+        confetti.style.left = '50%';
+        confetti.style.top = '50%';
+        confetti.style.setProperty('--burst-x', burstX + 'px');
+        confetti.style.setProperty('--burst-y', burstY + 'px');
+
+        const duration = 3 + Math.random() * 2;
+        confetti.style.animation = `confettiBurst ${duration}s ease-out forwards`;
+
+        petalsOverlay.appendChild(confetti);
+    }
+
+    // Continuous falling confetti
+    for (let i = 0; i < 40; i++) {
+        const confetti = document.createElement('div');
+        const type = confettiTypes[Math.floor(Math.random() * confettiTypes.length)];
+
+        confetti.className = `confetti confetti-${type}`;
+
+        const startX = Math.random() * 100;
+        const delay = 0.5 + Math.random() * 2;
+        const duration = 4 + Math.random() * 3;
+        const drift = (Math.random() - 0.5) * 200;
+
+        confetti.style.left = startX + '%';
+        confetti.style.setProperty('--confetti-drift', drift + 'px');
+        confetti.style.animation = `confettiFall ${duration}s ${delay}s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards`;
+
+        petalsOverlay.appendChild(confetti);
+    }
+}
+
+// CREATE SPARKLES
+function createSparkles() {
+    const sparkleCount = 20;
+
+    for (let i = 0; i < sparkleCount; i++) {
+        const sparkle = document.createElement('div');
+        sparkle.className = 'sparkle';
+
+        // Random positioning
+        const startX = 20 + Math.random() * 60; // Center area
+        const startY = 30 + Math.random() * 40; // Middle area
+        const delay = Math.random() * 2;
+        const duration = 3 + Math.random() * 2;
+
+        sparkle.style.left = startX + '%';
+        sparkle.style.top = startY + '%';
+        sparkle.style.animation = `sparkleFloat ${duration}s ${delay}s ease-out`;
+
+        sparklesOverlay.appendChild(sparkle);
+
+        // Remove sparkle after animation
+        setTimeout(() => {
+            sparkle.remove();
+        }, (duration + delay) * 1000);
+    }
+}
+
+// Removed cheap-looking lotus flowers - premium invitations focus on elegant typography and refined details
 
 // INITIAL REVEAL ANIMATIONS - Optimized
 function initAnimations() {
