@@ -171,67 +171,119 @@ function createSparkles() {
 
 // Removed cheap-looking lotus flowers - premium invitations focus on elegant typography and refined details
 
-// INITIAL REVEAL ANIMATIONS - Optimized
+// SMOOTH REVEAL ANIMATIONS
 function initAnimations() {
-    // Hero text reveal
+    // Hero text reveal - elegant cascade
     gsap.from('.giant-line', {
         yPercent: 100,
         duration: 1.6,
-        stagger: 0.12,
-        ease: 'expo.out',
-        delay: 0.2
+        stagger: 0.18,
+        ease: 'power4.out',
+        delay: 0.3
     });
 
     gsap.from('.hero-meta > *', {
         opacity: 0,
-        y: 30,
         duration: 1.2,
-        stagger: 0.1,
+        stagger: 0.2,
         ease: 'power3.out',
-        delay: 1
+        delay: 1.4
     });
 
-    // Event sections - simple fade in
-    gsap.utils.toArray('.event-reveal').forEach((section) => {
-        ScrollTrigger.create({
-            trigger: section,
-            start: 'top 80%',
-            once: true,
-            onEnter: () => {
-                gsap.to(section, {
-                    opacity: 1,
+    // Event sections - simple fade reveal
+    gsap.utils.toArray('.event-reveal').forEach((section, index) => {
+        const bg = section.querySelector('.section-background');
+        const heading = section.querySelector('.event-heading-fixed');
+        const card = section.querySelector('.event-info-card');
+        const infoItems = card ? card.querySelectorAll('.info-item') : [];
+
+        // Background image reveal
+        if (bg) {
+            gsap.from(bg, {
+                scrollTrigger: {
+                    trigger: section,
+                    start: 'top 80%',
+                    once: true
+                },
+                opacity: 0,
+                duration: 1.4,
+                ease: 'power3.out'
+            });
+        }
+
+        // Heading card reveal
+        if (heading) {
+            gsap.from(heading, {
+                scrollTrigger: {
+                    trigger: section,
+                    start: 'top 70%',
+                    once: true
+                },
+                opacity: 0,
+                duration: 1.2,
+                ease: 'power3.out',
+                delay: 0.3
+            });
+        }
+
+        // Info card reveal
+        if (card) {
+            gsap.from(card, {
+                scrollTrigger: {
+                    trigger: section,
+                    start: 'top 65%',
+                    once: true
+                },
+                opacity: 0,
+                duration: 1.2,
+                ease: 'power3.out',
+                delay: 0.5
+            });
+
+            // Info items cascade
+            if (infoItems.length > 0) {
+                gsap.from(infoItems, {
+                    scrollTrigger: {
+                        trigger: section,
+                        start: 'top 60%',
+                        once: true
+                    },
+                    opacity: 0,
                     duration: 0.8,
-                    ease: 'power2.out'
+                    stagger: 0.12,
+                    ease: 'power2.out',
+                    delay: 0.8
                 });
             }
-        });
+        }
     });
 
-    // Gallery - staggered reveal
+    // Gallery - simple fade reveal
     ScrollTrigger.create({
         trigger: '.gallery-showcase',
-        start: 'top 95%',
+        start: 'top 80%',
         once: true,
         onEnter: () => {
             gsap.from('.gallery-heading', {
                 opacity: 0,
-                y: 60,
                 duration: 1.4,
                 ease: 'power3.out'
             });
 
             gsap.from('.journey-box', {
-                scale: 0.95,
-                y: 20,
+                opacity: 0,
                 duration: 1,
-                stagger: 0.1,
+                stagger: {
+                    amount: 0.5,
+                    from: 'start'
+                },
                 ease: 'power3.out',
-                delay: 0.2
+                delay: 0.3
             });
         }
     });
 
-    // Footer
+    // Footer - gentle fade
     ScrollTrigger.create({
         trigger: '.finale',
         start: 'top 80%',
@@ -239,7 +291,6 @@ function initAnimations() {
         onEnter: () => {
             gsap.from('.finale-message', {
                 opacity: 0,
-                y: 40,
                 duration: 1.4,
                 ease: 'power3.out'
             });
@@ -247,71 +298,55 @@ function initAnimations() {
     });
 }
 
-// OPTIMIZED PARALLAX - Reduced triggers for better performance
+// SMOOTH PARALLAX EFFECTS
 function initParallax() {
-    // Only run parallax on desktop to avoid mobile performance issues
+    // Only run parallax on desktop
     if (window.innerWidth < 768) {
         return;
     }
 
-    // HERO SECTION - Single parallax group
-    const heroTL = gsap.timeline({
+    // HERO SECTION - Subtle fade only
+    gsap.to('.hero-giant', {
+        opacity: 0.5,
         scrollTrigger: {
             trigger: '.hero-full',
             start: 'top top',
             end: 'bottom top',
-            scrub: 1,
-            invalidateOnRefresh: true
+            scrub: 2
         }
     });
 
-    heroTL
-        .to('.giant-line', { y: -60, stagger: 0.1 }, 0)
-        .to('.couple-names', { y: -40, opacity: 0.5 }, 0)
-        .to('.wedding-year', { y: -70, opacity: 0.3 }, 0);
-
-    // EVENT SECTIONS - Combined animations
-    gsap.utils.toArray('.event-reveal').forEach((section) => {
-        const bgImg = section.querySelector('.event-bg-img');
-        const eventName = section.querySelector('.event-name');
-
-        gsap.timeline({
-            scrollTrigger: {
-                trigger: section,
-                start: 'top bottom',
-                end: 'bottom top',
-                scrub: 1.5,
-                invalidateOnRefresh: true
-            }
-        })
-        .fromTo(bgImg,
-            { scale: 1.2, y: -30 },
-            { scale: 1, y: 50 }, 0
-        )
-        .to(eventName, { y: -30 }, 0);
-    });
-
-    // GALLERY - Minimal parallax
-    gsap.to('.gallery-heading', {
-        y: -40,
+    gsap.to('.hero-meta', {
+        opacity: 0.3,
         scrollTrigger: {
-            trigger: '.gallery-showcase',
-            start: 'top bottom',
+            trigger: '.hero-full',
+            start: 'top top',
             end: 'bottom top',
-            scrub: 1.5,
-            invalidateOnRefresh: true
+            scrub: 2
         }
     });
 
-    // FOOTER
-    gsap.to('.finale-message', {
-        scale: 1.1,
-        scrollTrigger: {
-            trigger: '.finale',
-            start: 'top bottom',
-            end: 'center center',
-            scrub: 1.5,
-            invalidateOnRefresh: true
+    // EVENT SECTIONS - Minimal parallax
+    gsap.utils.toArray('.event-reveal').forEach((section, index) => {
+        const bgImg = section.querySelector('.section-background img');
+
+        // Background image subtle movement only
+        if (bgImg) {
+            gsap.fromTo(bgImg,
+                {
+                    y: -30
+                },
+                {
+                    y: 30,
+                    ease: 'none',
+                    scrollTrigger: {
+                        trigger: section,
+                        start: 'top bottom',
+                        end: 'bottom top',
+                        scrub: 1.5
+                    }
+                }
+            );
         }
     });
 }

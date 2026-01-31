@@ -7,69 +7,17 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300&family=Outfit:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300&family=Outfit:wght@200;300;400;500&family=Tiro+Devanagari+Sanskrit:ital@0;1&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Mehndi/Embroidery Patterns -->
-    <div class="mehndi-overlay">
-        <!-- Paisley patterns -->
-        <svg class="mehndi-pattern paisley-1" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-            <path d="M100,20 Q140,40 150,80 Q160,120 140,150 Q120,180 80,170 Q40,160 30,120 Q20,80 40,50 Q60,20 100,20 Z" fill="none" stroke="currentColor" stroke-width="2"/>
-            <path d="M100,40 Q130,55 135,85 Q140,115 125,135 Q110,155 85,148 Q60,141 55,111 Q50,81 65,61 Q80,41 100,40 Z" fill="none" stroke="currentColor" stroke-width="1.5"/>
-            <circle cx="100" cy="80" r="3" fill="currentColor"/>
-            <circle cx="90" cy="100" r="2.5" fill="currentColor"/>
-            <circle cx="110" cy="95" r="2" fill="currentColor"/>
-            <path d="M70,90 Q75,85 80,90" fill="none" stroke="currentColor" stroke-width="1"/>
-            <path d="M120,110 Q125,105 130,110" fill="none" stroke="currentColor" stroke-width="1"/>
-        </svg>
-
-        <svg class="mehndi-pattern paisley-2" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-            <path d="M100,20 Q140,40 150,80 Q160,120 140,150 Q120,180 80,170 Q40,160 30,120 Q20,80 40,50 Q60,20 100,20 Z" fill="none" stroke="currentColor" stroke-width="2.5"/>
-            <path d="M100,35 Q132,52 140,85 Q148,118 132,142 Q116,166 84,159 Q52,152 44,119 Q36,86 52,59 Q68,32 100,35 Z" fill="none" stroke="currentColor" stroke-width="1.5"/>
-            <circle cx="100" cy="75" r="4" fill="currentColor"/>
-            <circle cx="85" cy="95" r="3" fill="currentColor"/>
-            <circle cx="115" cy="90" r="3.5" fill="currentColor"/>
-            <circle cx="95" cy="120" r="2.5" fill="currentColor"/>
-        </svg>
-
-        <svg class="mehndi-pattern paisley-3" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-            <path d="M100,30 Q130,45 138,75 Q146,105 133,130 Q120,155 90,150 Q60,145 52,115 Q44,85 57,60 Q70,35 100,30 Z" fill="none" stroke="currentColor" stroke-width="2"/>
-            <circle cx="100" cy="80" r="3" fill="currentColor"/>
-            <circle cx="90" cy="100" r="2" fill="currentColor"/>
-            <path d="M75,90 Q80,85 85,90" fill="none" stroke="currentColor" stroke-width="1"/>
-        </svg>
-
-        <!-- Mandala pattern -->
-        <svg class="mehndi-pattern mandala-1" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="100" cy="100" r="80" fill="none" stroke="currentColor" stroke-width="1.5"/>
-            <circle cx="100" cy="100" r="60" fill="none" stroke="currentColor" stroke-width="1"/>
-            <circle cx="100" cy="100" r="40" fill="none" stroke="currentColor" stroke-width="1"/>
-            <circle cx="100" cy="100" r="20" fill="none" stroke="currentColor" stroke-width="1.5"/>
-            <path d="M100,20 L100,180 M20,100 L180,100" stroke="currentColor" stroke-width="1"/>
-            <path d="M35,35 L165,165 M165,35 L35,165" stroke="currentColor" stroke-width="0.8"/>
-            <circle cx="100" cy="20" r="5" fill="currentColor"/>
-            <circle cx="100" cy="180" r="5" fill="currentColor"/>
-            <circle cx="20" cy="100" r="5" fill="currentColor"/>
-            <circle cx="180" cy="100" r="5" fill="currentColor"/>
-            <circle cx="35" cy="35" r="4" fill="currentColor"/>
-            <circle cx="165" cy="165" r="4" fill="currentColor"/>
-            <circle cx="165" cy="35" r="4" fill="currentColor"/>
-            <circle cx="35" cy="165" r="4" fill="currentColor"/>
+    <!-- Subtle Hindu Pattern Accent - Single clean mandala -->
+    <div class="pattern-accent">
+        <svg class="mandala-accent" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="100" cy="100" r="70" fill="none" stroke="currentColor" stroke-width="0.5" opacity="0.3"/>
+            <circle cx="100" cy="100" r="50" fill="none" stroke="currentColor" stroke-width="0.5" opacity="0.3"/>
+            <circle cx="100" cy="100" r="30" fill="none" stroke="currentColor" stroke-width="0.5" opacity="0.3"/>
         </svg>
     </div>
-
-    <!-- Watercolor Overlay -->
-    <div class="watercolor-overlay">
-        <div class="watercolor-blob blob-1"></div>
-        <div class="watercolor-blob blob-2"></div>
-        <div class="watercolor-blob blob-3"></div>
-    </div>
-
-    <!-- Paper Texture Overlay -->
-    <div class="paper-texture"></div>
-
-    <!-- Grain Texture Overlay -->
-    <div class="grain-overlay"></div>
 
     <!-- Custom Cursor -->
     <div class="cursor" id="cursor"></div>
@@ -89,83 +37,32 @@
         <div class="reveal-right"></div>
         <div class="reveal-content">
             <div class="reveal-card">
-                <!-- Royal Indian Embroidery Border Ornaments -->
+                <!-- Elegant Border Designs (No Dots) -->
                 <div class="traditional-border">
-                    <!-- Elaborate top border -->
+                    <!-- Top border -->
                     <div class="ornate-border top-border">
                         <svg viewBox="0 0 600 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M0,40 Q50,20 100,40 T200,40 T300,40 T400,40 T500,40 T600,40" stroke="currentColor" stroke-width="2" fill="none"/>
                             <path d="M0,35 Q50,15 100,35 T200,35 T300,35 T400,35 T500,35 T600,35" stroke="currentColor" stroke-width="1.5" fill="none" opacity="0.7"/>
-                            <circle cx="100" cy="40" r="4" fill="currentColor"/>
-                            <circle cx="200" cy="40" r="4" fill="currentColor"/>
-                            <circle cx="300" cy="40" r="4" fill="currentColor"/>
-                            <circle cx="400" cy="40" r="4" fill="currentColor"/>
-                            <circle cx="500" cy="40" r="4" fill="currentColor"/>
                         </svg>
                     </div>
+                    <!-- Bottom border -->
                     <div class="ornate-border bottom-border">
                         <svg viewBox="0 0 600 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M0,40 Q50,20 100,40 T200,40 T300,40 T400,40 T500,40 T600,40" stroke="currentColor" stroke-width="2" fill="none"/>
                             <path d="M0,45 Q50,25 100,45 T200,45 T300,45 T400,45 T500,45 T600,45" stroke="currentColor" stroke-width="1.5" fill="none" opacity="0.7"/>
-                            <circle cx="100" cy="40" r="4" fill="currentColor"/>
-                            <circle cx="200" cy="40" r="4" fill="currentColor"/>
-                            <circle cx="300" cy="40" r="4" fill="currentColor"/>
-                            <circle cx="400" cy="40" r="4" fill="currentColor"/>
-                            <circle cx="500" cy="40" r="4" fill="currentColor"/>
                         </svg>
                     </div>
 
-                    <!-- Elaborate corner designs -->
+                    <!-- Corner designs (No dots/circles) -->
                     <div class="border-corner top-left">
                         <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                            <!-- Main corner framework -->
                             <path d="M15,15 L15,90 M15,15 L90,15" stroke="currentColor" stroke-width="3" fill="none"/>
                             <path d="M20,20 L20,80 M20,20 L80,20" stroke="currentColor" stroke-width="2" fill="none" opacity="0.7"/>
-
-                            <!-- Large ornate paisley -->
-                            <path d="M30,30 Q55,35 65,55 Q75,75 60,90 Q45,105 30,90 Q15,75 20,55 Q25,35 30,30 Z"
-                                  fill="none" stroke="currentColor" stroke-width="2.5"/>
-                            <path d="M35,40 Q50,43 55,55 Q60,67 50,75 Q40,83 33,72 Q26,61 30,50 Q34,39 35,40 Z"
-                                  fill="none" stroke="currentColor" stroke-width="1.8"/>
-                            <path d="M40,48 Q47,50 50,57 Q53,64 47,68 Q41,72 38,65 Q35,58 37,52 Q39,47 40,48 Z"
-                                  fill="currentColor" opacity="0.3"/>
-
-                            <!-- Decorative dots pattern -->
-                            <circle cx="45" cy="58" r="3" fill="currentColor"/>
-                            <circle cx="50" cy="65" r="2.5" fill="currentColor" opacity="0.8"/>
-                            <circle cx="40" cy="63" r="2" fill="currentColor" opacity="0.8"/>
-                            <circle cx="48" cy="55" r="1.8" fill="currentColor" opacity="0.7"/>
-
-                            <!-- Swirls and vines -->
+                            <path d="M30,30 Q55,35 65,55 Q75,75 60,90 Q45,105 30,90 Q15,75 20,55 Q25,35 30,30 Z" fill="none" stroke="currentColor" stroke-width="2.5"/>
+                            <path d="M35,40 Q50,43 55,55 Q60,67 50,75 Q40,83 33,72 Q26,61 30,50 Q34,39 35,40 Z" fill="none" stroke="currentColor" stroke-width="1.8"/>
                             <path d="M70,25 Q80,30 75,40 Q70,50 60,45" stroke="currentColor" stroke-width="1.5" fill="none"/>
                             <path d="M25,70 Q30,80 40,75 Q50,70 45,60" stroke="currentColor" stroke-width="1.5" fill="none"/>
-
-                            <!-- Flower motifs -->
-                            <g transform="translate(75,30)">
-                                <circle cx="0" cy="0" r="6" fill="none" stroke="currentColor" stroke-width="1.5"/>
-                                <circle cx="0" cy="0" r="3" fill="currentColor"/>
-                                <circle cx="0" cy="-8" r="2" fill="currentColor" opacity="0.6"/>
-                                <circle cx="6" cy="-5" r="2" fill="currentColor" opacity="0.6"/>
-                                <circle cx="6" cy="5" r="2" fill="currentColor" opacity="0.6"/>
-                                <circle cx="0" cy="8" r="2" fill="currentColor" opacity="0.6"/>
-                                <circle cx="-6" cy="5" r="2" fill="currentColor" opacity="0.6"/>
-                                <circle cx="-6" cy="-5" r="2" fill="currentColor" opacity="0.6"/>
-                            </g>
-
-                            <g transform="translate(30,75)">
-                                <circle cx="0" cy="0" r="6" fill="none" stroke="currentColor" stroke-width="1.5"/>
-                                <circle cx="0" cy="0" r="3" fill="currentColor"/>
-                                <circle cx="0" cy="-8" r="2" fill="currentColor" opacity="0.6"/>
-                                <circle cx="6" cy="-5" r="2" fill="currentColor" opacity="0.6"/>
-                                <circle cx="6" cy="5" r="2" fill="currentColor" opacity="0.6"/>
-                                <circle cx="0" cy="8" r="2" fill="currentColor" opacity="0.6"/>
-                                <circle cx="-6" cy="5" r="2" fill="currentColor" opacity="0.6"/>
-                                <circle cx="-6" cy="-5" r="2" fill="currentColor" opacity="0.6"/>
-                            </g>
-
-                            <!-- Intricate line work -->
-                            <path d="M25,25 Q30,28 33,25 Q36,28 39,25 Q42,28 45,25" stroke="currentColor" stroke-width="1" fill="none" opacity="0.6"/>
-                            <path d="M25,30 Q28,33 25,36 Q28,39 25,42 Q28,45 25,48" stroke="currentColor" stroke-width="1" fill="none" opacity="0.6"/>
                         </svg>
                     </div>
                     <div class="border-corner top-right">
@@ -173,20 +70,8 @@
                             <path d="M15,15 L15,90 M15,15 L90,15" stroke="currentColor" stroke-width="3" fill="none"/>
                             <path d="M20,20 L20,80 M20,20 L80,20" stroke="currentColor" stroke-width="2" fill="none" opacity="0.7"/>
                             <path d="M30,30 Q55,35 65,55 Q75,75 60,90 Q45,105 30,90 Q15,75 20,55 Q25,35 30,30 Z" fill="none" stroke="currentColor" stroke-width="2.5"/>
-                            <path d="M35,40 Q50,43 55,55 Q60,67 50,75 Q40,83 33,72 Q26,61 30,50 Q34,39 35,40 Z" fill="none" stroke="currentColor" stroke-width="1.8"/>
-                            <path d="M40,48 Q47,50 50,57 Q53,64 47,68 Q41,72 38,65 Q35,58 37,52 Q39,47 40,48 Z" fill="currentColor" opacity="0.3"/>
-                            <circle cx="45" cy="58" r="3" fill="currentColor"/>
-                            <circle cx="50" cy="65" r="2.5" fill="currentColor" opacity="0.8"/>
-                            <circle cx="40" cy="63" r="2" fill="currentColor" opacity="0.8"/>
                             <path d="M70,25 Q80,30 75,40 Q70,50 60,45" stroke="currentColor" stroke-width="1.5" fill="none"/>
                             <path d="M25,70 Q30,80 40,75 Q50,70 45,60" stroke="currentColor" stroke-width="1.5" fill="none"/>
-                            <g transform="translate(75,30)">
-                                <circle cx="0" cy="0" r="6" fill="none" stroke="currentColor" stroke-width="1.5"/>
-                                <circle cx="0" cy="0" r="3" fill="currentColor"/>
-                                <circle cx="0" cy="-8" r="2" fill="currentColor" opacity="0.6"/>
-                                <circle cx="6" cy="-5" r="2" fill="currentColor" opacity="0.6"/>
-                                <circle cx="6" cy="5" r="2" fill="currentColor" opacity="0.6"/>
-                            </g>
                         </svg>
                     </div>
                     <div class="border-corner bottom-left">
@@ -194,14 +79,6 @@
                             <path d="M15,15 L15,90 M15,15 L90,15" stroke="currentColor" stroke-width="3" fill="none"/>
                             <path d="M20,20 L20,80 M20,20 L80,20" stroke="currentColor" stroke-width="2" fill="none" opacity="0.7"/>
                             <path d="M30,30 Q55,35 65,55 Q75,75 60,90 Q45,105 30,90 Q15,75 20,55 Q25,35 30,30 Z" fill="none" stroke="currentColor" stroke-width="2.5"/>
-                            <path d="M35,40 Q50,43 55,55 Q60,67 50,75 Q40,83 33,72 Q26,61 30,50 Q34,39 35,40 Z" fill="none" stroke="currentColor" stroke-width="1.8"/>
-                            <path d="M40,48 Q47,50 50,57 Q53,64 47,68 Q41,72 38,65 Q35,58 37,52 Q39,47 40,48 Z" fill="currentColor" opacity="0.3"/>
-                            <circle cx="45" cy="58" r="3" fill="currentColor"/>
-                            <circle cx="50" cy="65" r="2.5" fill="currentColor" opacity="0.8"/>
-                            <g transform="translate(75,30)">
-                                <circle cx="0" cy="0" r="6" fill="none" stroke="currentColor" stroke-width="1.5"/>
-                                <circle cx="0" cy="0" r="3" fill="currentColor"/>
-                            </g>
                         </svg>
                     </div>
                     <div class="border-corner bottom-right">
@@ -209,71 +86,8 @@
                             <path d="M15,15 L15,90 M15,15 L90,15" stroke="currentColor" stroke-width="3" fill="none"/>
                             <path d="M20,20 L20,80 M20,20 L80,20" stroke="currentColor" stroke-width="2" fill="none" opacity="0.7"/>
                             <path d="M30,30 Q55,35 65,55 Q75,75 60,90 Q45,105 30,90 Q15,75 20,55 Q25,35 30,30 Z" fill="none" stroke="currentColor" stroke-width="2.5"/>
-                            <path d="M35,40 Q50,43 55,55 Q60,67 50,75 Q40,83 33,72 Q26,61 30,50 Q34,39 35,40 Z" fill="none" stroke="currentColor" stroke-width="1.8"/>
-                            <path d="M40,48 Q47,50 50,57 Q53,64 47,68 Q41,72 38,65 Q35,58 37,52 Q39,47 40,48 Z" fill="currentColor" opacity="0.3"/>
-                            <circle cx="45" cy="58" r="3" fill="currentColor"/>
-                            <g transform="translate(75,30)">
-                                <circle cx="0" cy="0" r="6" fill="none" stroke="currentColor" stroke-width="1.5"/>
-                                <circle cx="0" cy="0" r="3" fill="currentColor"/>
-                            </g>
                         </svg>
                     </div>
-                </div>
-
-                <!-- Elaborate Rangoli pattern background -->
-                <div class="rangoli-pattern">
-                    <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
-                        <!-- Outer circles -->
-                        <circle cx="150" cy="150" r="120" fill="none" stroke="url(#grad1)" stroke-width="2" opacity="0.4"/>
-                        <circle cx="150" cy="150" r="100" fill="none" stroke="url(#grad2)" stroke-width="2.5" opacity="0.45"/>
-                        <circle cx="150" cy="150" r="80" fill="none" stroke="url(#grad1)" stroke-width="2" opacity="0.4"/>
-                        <circle cx="150" cy="150" r="60" fill="none" stroke="url(#grad2)" stroke-width="2" opacity="0.35"/>
-                        <circle cx="150" cy="150" r="40" fill="none" stroke="url(#grad1)" stroke-width="2.5" opacity="0.5"/>
-                        <circle cx="150" cy="150" r="20" fill="url(#grad2)" opacity="0.3"/>
-
-                        <!-- Main petals (8 directions) -->
-                        <ellipse cx="150" cy="50" rx="15" ry="40" fill="url(#grad1)" opacity="0.25"/>
-                        <ellipse cx="150" cy="250" rx="15" ry="40" fill="url(#grad1)" opacity="0.25"/>
-                        <ellipse cx="50" cy="150" rx="40" ry="15" fill="url(#grad1)" opacity="0.25"/>
-                        <ellipse cx="250" cy="150" rx="40" ry="15" fill="url(#grad1)" opacity="0.25"/>
-                        <ellipse cx="80" cy="80" rx="20" ry="35" transform="rotate(-45 80 80)" fill="url(#grad2)" opacity="0.25"/>
-                        <ellipse cx="220" cy="80" rx="20" ry="35" transform="rotate(45 220 80)" fill="url(#grad2)" opacity="0.25"/>
-                        <ellipse cx="80" cy="220" rx="20" ry="35" transform="rotate(45 80 220)" fill="url(#grad2)" opacity="0.25"/>
-                        <ellipse cx="220" cy="220" rx="20" ry="35" transform="rotate(-45 220 220)" fill="url(#grad2)" opacity="0.25"/>
-
-                        <!-- Decorative outer petals -->
-                        <g opacity="0.3">
-                            <path d="M150,20 Q155,35 150,50 Q145,35 150,20 Z" fill="url(#grad1)"/>
-                            <path d="M150,280 Q155,265 150,250 Q145,265 150,280 Z" fill="url(#grad1)"/>
-                            <path d="M20,150 Q35,145 50,150 Q35,155 20,150 Z" fill="url(#grad1)"/>
-                            <path d="M280,150 Q265,145 250,150 Q265,155 280,150 Z" fill="url(#grad1)"/>
-                        </g>
-
-                        <!-- Inner decorative dots -->
-                        <circle cx="150" cy="150" r="5" fill="url(#grad2)" opacity="0.6"/>
-                        <circle cx="150" cy="110" r="4" fill="url(#grad1)" opacity="0.5"/>
-                        <circle cx="150" cy="190" r="4" fill="url(#grad1)" opacity="0.5"/>
-                        <circle cx="110" cy="150" r="4" fill="url(#grad1)" opacity="0.5"/>
-                        <circle cx="190" cy="150" r="4" fill="url(#grad1)" opacity="0.5"/>
-                        <circle cx="125" cy="125" r="3" fill="url(#grad2)" opacity="0.5"/>
-                        <circle cx="175" cy="125" r="3" fill="url(#grad2)" opacity="0.5"/>
-                        <circle cx="125" cy="175" r="3" fill="url(#grad2)" opacity="0.5"/>
-                        <circle cx="175" cy="175" r="3" fill="url(#grad2)" opacity="0.5"/>
-
-                        <!-- Gradients -->
-                        <defs>
-                            <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" style="stop-color:#d4af37;stop-opacity:1" />
-                                <stop offset="50%" style="stop-color:#b22222;stop-opacity:1" />
-                                <stop offset="100%" style="stop-color:#d4af37;stop-opacity:1" />
-                            </linearGradient>
-                            <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" style="stop-color:#b22222;stop-opacity:1" />
-                                <stop offset="50%" style="stop-color:#8b0000;stop-opacity:1" />
-                                <stop offset="100%" style="stop-color:#b22222;stop-opacity:1" />
-                            </linearGradient>
-                        </defs>
-                    </svg>
                 </div>
 
                 <div class="reveal-ornaments">
@@ -282,6 +96,7 @@
                     <div class="rev-ornament o-3"></div>
                     <div class="rev-ornament o-4"></div>
                 </div>
+
                 <div class="card-monogram">N<br>&<br>G</div>
                 <div class="card-divider"></div>
                 <div class="card-invite-text">You're Invited</div>
@@ -310,31 +125,35 @@
 
         <section class="section event-reveal sagan-event">
             <div class="event-container">
-                <!-- Fixed heading at top -->
-                <div class="event-heading-fixed">
-                    <div class="event-label">01 — Opening Arguments</div>
-                    <h2 class="event-name">Sagan</h2>
+                <!-- Full-Width Background Image -->
+                <div class="section-background">
+                    <img src="background-2.png" alt="Sagan Background">
                 </div>
 
-                <!-- Background image behind heading -->
-                <div class="event-bg-img">
-                    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=1600&q=90" alt="Sagan">
-                </div>
+                <!-- Overlay Content -->
+                <div class="event-content-wrapper">
+                    <!-- Heading Card Overlay -->
+                    <div class="event-heading-fixed">
+                        <div class="event-label">01 — Opening Arguments</div>
+                        <h2 class="event-name">Sagan</h2>
+                    </div>
 
-                <!-- Info card overlays everything -->
-                <div class="event-content-overlay">
-                    <div class="event-info-card">
-                        <div class="info-item">
-                            <span class="info-key">Date</span>
-                            <span class="info-val">14 February 2026</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-key">Time</span>
-                            <span class="info-val">6:00 PM</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-key">Location</span>
-                            <span class="info-val">Venue Name<br>City, State</span>
+                    <!-- Info Card Overlay -->
+                    <div class="event-content-overlay">
+                        <div class="event-info-card">
+                            <div class="info-item">
+                                <span class="info-key">Date</span>
+                                <span class="info-val">14 February 2026</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-key">Time</span>
+                                <span class="info-val">6:00 PM</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-key">Location</span>
+                                <span class="info-val">Rajwada Palace<br>GT Karnal Road, Delhi</span>
+                            </div>
+                            <a href="https://maps.app.goo.gl/6QToJpdfyKEdHatZ7" target="_blank" class="map-link">View on Map</a>
                         </div>
                     </div>
                 </div>
@@ -343,31 +162,35 @@
 
         <section class="section event-reveal wedding-event">
             <div class="event-container">
-                <!-- Fixed heading at top -->
-                <div class="event-heading-fixed right">
-                    <div class="event-label">02 — The Ruling</div>
-                    <h2 class="event-name">Wedding</h2>
+                <!-- Full-Width Background Image -->
+                <div class="section-background">
+                    <img src="background-1.png" alt="Wedding Background">
                 </div>
 
-                <!-- Background image behind heading -->
-                <div class="event-bg-img">
-                    <img src="https://images.unsplash.com/photo-1606800052052-a08af7148866?w=1600&q=90" alt="Wedding">
-                </div>
+                <!-- Overlay Content -->
+                <div class="event-content-wrapper">
+                    <!-- Heading Card Overlay (Right Aligned) -->
+                    <div class="event-heading-fixed right">
+                        <div class="event-label">02 — The Ruling</div>
+                        <h2 class="event-name">Wedding</h2>
+                    </div>
 
-                <!-- Info card overlays everything -->
-                <div class="event-content-overlay right">
-                    <div class="event-info-card">
-                        <div class="info-item">
-                            <span class="info-key">Date</span>
-                            <span class="info-val">21 February 2026</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-key">Time</span>
-                            <span class="info-val">7:00 PM</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-key">Location</span>
-                            <span class="info-val">Venue Name<br>City, State</span>
+                    <!-- Info Card Overlay (Right Aligned) -->
+                    <div class="event-content-overlay right">
+                        <div class="event-info-card">
+                            <div class="info-item">
+                                <span class="info-key">Date</span>
+                                <span class="info-val">21 February 2026</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-key">Time</span>
+                                <span class="info-val">7:00 PM</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-key">Location</span>
+                                <span class="info-val">La Maurya<br>GT Karnal Road, Delhi</span>
+                            </div>
+                            <a href="https://maps.app.goo.gl/cr4KmjTvQ5ygbRg18" target="_blank" class="map-link">View on Map</a>
                         </div>
                     </div>
                 </div>
@@ -378,32 +201,13 @@
             <h2 class="gallery-heading">Our Journey</h2>
             <div class="journey-grid">
                 <div class="journey-box box-1" data-magnetic>
-                    <div class="journey-box-inner">
-                        <span class="journey-number">01</span>
-                        <h3 class="journey-title">Opening Statements</h3>
-                        <p class="journey-text">Where our case began</p>
-                    </div>
+                    <img src="img-1.jpeg" alt="Our Journey" class="journey-image">
                 </div>
                 <div class="journey-box box-2" data-magnetic>
-                    <div class="journey-box-inner">
-                        <span class="journey-number">02</span>
-                        <h3 class="journey-title">Discovery Phase</h3>
-                        <p class="journey-text">Finding love in the evidence</p>
-                    </div>
+                    <img src="img-2.JPG" alt="Our Journey" class="journey-image">
                 </div>
                 <div class="journey-box box-3" data-magnetic>
-                    <div class="journey-box-inner">
-                        <span class="journey-number">03</span>
-                        <h3 class="journey-title">Joint Petition</h3>
-                        <p class="journey-text">Two counsels becoming one</p>
-                    </div>
-                </div>
-                <div class="journey-box box-4" data-magnetic>
-                    <div class="journey-box-inner">
-                        <span class="journey-number">04</span>
-                        <h3 class="journey-title">Final Verdict</h3>
-                        <p class="journey-text">Guilty of loving forever</p>
-                    </div>
+                    <img src="img-3.JPG" alt="Our Journey" class="journey-image">
                 </div>
             </div>
         </section>
@@ -411,7 +215,7 @@
         <footer class="section finale">
             <div class="finale-overlay"></div>
             <div class="finale-content">
-                <p class="finale-message">Case closed<br>with love</p>
+                <p class="finale-message">You are invited<br>to be a witness</p>
             </div>
         </footer>
     </div>
