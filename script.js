@@ -73,8 +73,18 @@ const birdsContainer = document.getElementById('birdsContainer');
 const petalsOverlay = document.getElementById('petalsOverlay');
 const sparklesOverlay = document.getElementById('sparklesOverlay');
 
+// Background music
+const backgroundMusic = new Audio('music.mp3');
+backgroundMusic.loop = true;
+backgroundMusic.volume = 0.5;
+
 openBtn.addEventListener('click', () => {
     pageReveal.classList.add('opened');
+
+    // Start music
+    backgroundMusic.play().catch(err => {
+        console.log('Audio playback failed:', err);
+    });
 
     // Activate sparkles
     setTimeout(() => {
